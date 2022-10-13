@@ -32,6 +32,6 @@ app.use(express.json())
     .catch((err) => console.log("error de connectyion database "));
 
 //routers:
-const routerCollection = require("./routes/docs.js")
+const routerCollection = require("./routes/routerDocs.js")
 
 app.use("/", routerCollection)
