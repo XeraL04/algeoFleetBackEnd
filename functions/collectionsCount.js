@@ -1,3 +1,10 @@
+const {MongoClient} = require ('mongodb')
+
+const client = new MongoClient("mongodb://localhost:27017")
+const database = client.db("active_tracking")
+
+// Seconde we need to get the count of the documents (how many documents there is in each collection)
+
 function getTheCount (collection) {
     let estimate = 0;
 
@@ -17,4 +24,4 @@ function getTheCount (collection) {
     })
 }
 
-module.exports = getTheCount;
+module.exports=getTheCount;
